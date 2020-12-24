@@ -84,3 +84,47 @@ imgs.forEach((img, i) => {
 // Modifique o href do link externo no menu
 const linkExterno = document.querySelector('a[href^="http"]');
 linkExterno.setAttribute('href', 'https://github.com/Lucas-HMSC')
+
+//=========================================================================
+/* Exercício 004  */
+
+// Verifique a distância da primeira imagem
+// em relação ao topo da página
+const firstImg = document.querySelector('img');
+console.log(firstImg.offsetTop);
+
+// Retorne a soma da largura de todas as imagens
+function somarImagens() {
+  const imgs = document.querySelectorAll('img');
+  let larguraAll = 0;
+  imgs.forEach((img) => {
+    larguraAll += img.offsetWidth;
+  });
+  console.log(larguraAll);
+}
+window.onload = () => {
+  somarImagens();
+}
+
+
+// Verifique se os links da página possuem
+// o mínimo recomendado para telas utilizadas
+// com o dedo. (48px/48px de acordo com o google)
+const links = document.querySelectorAll('a');
+links.forEach((link, i) => {
+  if (link.offsetHeight >= 48 && link.offsetWidth >= 48){
+    console.log(`${i} - possui o minimo recomendado`);
+  } else {
+    console.log(`${i} - não possui o minimo recomendado`);
+  }
+});
+
+
+// Se o browser for menor que 720px,
+// adicione a classe menu-mobile ao menu
+const janelaBrowser = window.matchMedia('(max-width: 720px)').matches;
+if (janelaBrowser){
+  const menu = document.querySelector('.menu');
+  menu.classList.add('menu-mobile');
+  console.log(menu);
+}
