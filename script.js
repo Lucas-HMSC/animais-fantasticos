@@ -52,3 +52,35 @@ imgs.forEach(() => {
 });
 
 imgs.forEach(() => i++);
+
+//=========================================================================
+/* Exercício 003  */
+
+// Adicione a classe ativo a todos os itens do menu
+const itensMenu = document.querySelectorAll('.menu a');
+itensMenu.forEach((item) => {
+  item.classList.add('ativo');
+  console.log(item);
+});
+
+// Remove a classe ativo de todos os itens do menu e mantenha apenas no primeiro
+const firstItemMenu = itensMenu[0];
+itensMenu.forEach((item) => {
+  item.classList.remove('ativo');
+});
+firstItemMenu.classList.add('ativo');
+console.log(itensMenu);
+
+// Verifique se as imagens possuem o atributo alt
+const imgs = document.querySelectorAll('img');
+imgs.forEach((img, i) => {
+  if (!img.hasAttribute('alt')){
+    console.log(`${i} - Não possui alt Text`);
+  } else {
+    console.log(`${i} - Possui alt Text`);
+  }
+});
+
+// Modifique o href do link externo no menu
+const linkExterno = document.querySelector('a[href^="http"]');
+linkExterno.setAttribute('href', 'https://github.com/Lucas-HMSC')
