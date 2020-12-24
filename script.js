@@ -106,7 +106,6 @@ window.onload = () => {
   somarImagens();
 }
 
-
 // Verifique se os links da página possuem
 // o mínimo recomendado para telas utilizadas
 // com o dedo. (48px/48px de acordo com o google)
@@ -128,3 +127,54 @@ if (janelaBrowser){
   menu.classList.add('menu-mobile');
   console.log(menu);
 }
+
+//=========================================================================
+/* Exercício 005  */
+
+// Quando o usuário clicar nos links internos do site,
+// adicione a classe ativo ao item clicado e remova dos
+// demais itens caso eles possuam a mesma. Previna
+// o comportamento padrão desses links
+const linksInternos = document.querySelectorAll('a[href^="#"]');
+
+function handleClick(event){
+  event.preventDefault();
+  linksInternos.forEach((link) => {
+    link.classList.remove('ativo');
+  });
+  this.classList.add('ativo');
+  console.log(linksInternos);
+}
+
+linksInternos.forEach((link) => {
+  link.addEventListener('click', handleClick);
+});
+
+// Selecione todos os elementos do site começando a partir do body,
+// ao clique mostre exatamente quais elementos estão sendo clicados
+const elementos = document.body;
+
+function handleBody(event) {
+  console.log(event.target);
+}
+
+elementos.addEventListener('click', handleBody);
+
+// Utilizando o código anterior, ao invés de mostrar no console,
+// remova o elemento que está sendo clicado, o método remove() remove um elemento
+
+function handleBodyRemove(event) {
+  event.preventDefault();
+  event.target.remove();
+}
+
+elementos.addEventListener('click', handleBodyRemove);
+
+// Se o usuário clicar na tecla (t), aumente todo o texto do site. 
+function aumentaTexto(event) {
+  if (event.key === 't'){
+    document.documentElement.classList.toggle('textomaior');
+  }
+}
+
+elementos.addEventListener('keydown', aumentaTexto);
