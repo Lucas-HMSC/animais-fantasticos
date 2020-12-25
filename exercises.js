@@ -281,3 +281,30 @@ li.click();    // undefined
 
 // Qual o construtor do dado abaixo:
 li.hidden.constructor.name; // String
+
+//=========================================================================
+/* Exercício 009  */
+
+// Liste 5 objetos nativos
+const nativos = [
+  'Number',
+  'Boolean',
+  'String',
+  'Array',
+  'Function'
+];
+
+// Liste 5 objetos do browser
+const browser = [
+  'Document',
+  'NodeList',
+  'HTMLCollection',
+  'Element',
+  'Window'
+];
+// Liste 2 Métodos, Propriedades ou Objetos
+// presentes no Chrome que não existem no Firefox
+const chrome = [
+  'webkitHidden',
+  'webkitIsFullScreen'
+];
