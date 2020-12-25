@@ -202,6 +202,10 @@ const animais = document.querySelector('.animais');
 faq.innerHTML = animais.outerHTML;
 console.log(animais);
 
+/*
+ * Exercícios realizados durante o módulo de Objetos
+*/
+
 //=========================================================================
 /* Exercício 007  */
 
@@ -308,3 +312,78 @@ const chrome = [
   'webkitHidden',
   'webkitIsFullScreen'
 ];
+
+//=========================================================================
+/* Exercício 010  */
+
+// Utilizando o foreach na array abaixo,
+// some os valores de Taxa e os valores de Recebimento
+
+const transacoes = [
+  {
+    descricao: 'Taxa do Pão',
+    valor: 'R$ 39',
+  },
+  {
+    descricao: 'Taxa do Mercado',
+    valor: 'R$ 129',
+  },
+  {
+    descricao: 'Recebimento de Cliente',
+    valor: 'R$ 99',
+  },
+  {
+    descricao: 'Taxa do Banco',
+    valor: 'R$ 129',
+  },
+  {
+    descricao: 'Recebimento de Cliente',
+    valor: 'R$ 49',
+  },
+];
+
+let somaTaxa = 0,
+    somaRecebimento = 0;
+
+transacoes.forEach((item) => {
+  if (item.descricao.includes('Taxa')){
+    let valor = item.valor.slice(2);
+    somaTaxa += Number(valor);
+  } else if (item.descricao.includes('Recebimento')){
+    valor = item.valor.slice(2);
+    somaRecebimento += Number(valor);
+  }
+});
+console.log('Somatório de taxas: ' + somaTaxa);
+console.log('Somatório de recebimentos: ' + somaRecebimento);
+
+// Retorne uma array com a lista abaixo
+const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
+const lista = transportes.split(';');
+console.log(lista);
+
+// Substitua todos os span's por a's
+const html = `<ul>
+                <li><span>Sobre</span></li>
+                <li><span>Produtos</span></li>
+                <li><span>Contato</span></li>
+              </ul>`;
+
+const htmlAdaptado = html.split('span').join('a');
+console.log(htmlAdaptado);
+
+// Retorne o último caracter da frase
+const frase = 'Melhor do ano!';
+console.log(frase.slice(-1));
+
+// Retorne o total de taxas
+const transacoes = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
+let qtd = 0;
+transacoes.forEach((item) => {
+  if (item.trim().toUpperCase().includes('TAXA')){
+    qtd++;
+  }
+});
+console.log(`Foi encontrado ${qtd} itens de Taxa.`);
+
+
