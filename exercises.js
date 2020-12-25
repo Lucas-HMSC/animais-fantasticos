@@ -417,3 +417,61 @@ function limpaPreco(lista) {
 limpaPreco(listaPrecos);
 console.log(novaLista); // [60, 100, 230, 200]
 console.log(somaTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})); // R$ 590,00
+
+//=========================================================================
+/* Exercício 012  */
+
+const comidas = ['Pizza', 'Frango', 'Carne', 'Macarrão'];
+// Remova o primeiro valor de comidas e coloque em uma variável
+const comida1 = comidas.shift();
+console.log(comida1); // Pizza
+
+// Remova o último valor de comidas e coloque em uma variável
+const comida2 = comidas.pop();
+console.log(comida2); // Macarrão
+
+// Adicione 'Arroz' ao final da array
+comidas.push('Arroz');
+console.log(comidas); // ["Frango", "Carne", "Arroz"]
+
+// Adicione 'Peixe' e 'Batata' ao início da array
+comidas.unshift('Peixe', 'Batata');
+console.log(comidas); // ["Peixe", "Batata", "Frango", "Carne", "Arroz"]
+
+const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
+// Arrume os estudantes em ordem alfabética
+console.log(estudantes.sort());
+
+// Inverta a ordem dos estudantes
+console.log(estudantes.reverse());
+
+// Verifique se Joana faz parte dos estudantes
+if (estudantes.includes('Joana')){
+  console.log('Joana faz parte dos estudantes');
+}
+
+// Verifique se Juliana faz parte dos estudantes
+if (estudantes.includes('Juliana')){
+  console.log('Juliana faz parte dos estudantes');
+} else {
+  console.log('Juliana não faz parte dos estudantes');
+}
+
+let html = `<section>
+              <div>Sobre</div>
+              <div>Produtos</div>
+              <div>Contato</div>
+            </section>`
+// Substitua section por ul e div com li,
+// utilizando split e join
+html = html.split('section').join('ul');
+html = html.split('div').join('li');
+console.log(html);
+
+const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
+// Remova o último carro, mas antes de remover
+// salve a array original em outra variável
+const cloneCarros = carros.slice();
+carros.pop();
+console.log(carros);
+console.log(cloneCarros);
