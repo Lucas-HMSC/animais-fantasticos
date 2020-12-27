@@ -19,6 +19,7 @@
     position: relative;
     z-index: 300;
   }
+  
   .js [data-menu="button"]::before {
     content: '';
     margin-right: 4px;
@@ -27,9 +28,13 @@
     width: 12px;
     background: #fff;
     box-shadow: 0 4px #fff, 0 -4px #fff;
+    transition: transform .3s;
+  }
+  .js [data-menu="button"].active::before {
+    transform: rotate(90deg);
   }
   .js [data-menu="lista"] {
-    display: block;
+    display: none;
     position: absolute;
     background: #FB5;
     width: 160px;
@@ -38,9 +43,13 @@
     padding: 60px 0 20px 0;
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .2);
   }
+  .js [data-menu="lista"].active {
+    display: block;
+    animation: show-right .3s forwards;
+  }
   .js .dropdown-menu {
     position: static;
     border: none;
-    
+
   }
 }
