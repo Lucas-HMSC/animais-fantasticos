@@ -7,7 +7,7 @@ import initTooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initAnimaNumeros from './modules/anima-numeros.js';
-
+import initFuncionamento from './modules/funcionamento.js';
 
 initScrollSmooth();
 initAnimationScroll();
@@ -18,3 +18,4 @@ initTooltip();
 initDropdownMenu();
 initMenuMobile();
 initAnimaNumeros();
+initFuncionamento();

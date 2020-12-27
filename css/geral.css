@@ -291,3 +291,25 @@ body {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+
+[data-semana]::after {
+  display: inline-block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #E54;
+  border-radius: 50%;
+  margin-left: 4px;
+  border: 2px solid #000;
+}
+
+[data-semana].aberto::after {
+  display: inline-block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #3F4;
+  border-radius: 50%;
+  margin-left: 4px;
+  border: 2px solid #000;
+}
