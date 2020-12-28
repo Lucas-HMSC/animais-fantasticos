@@ -1,0 +1,23 @@
+{
+  "name": "javascript-es6",
+  "version": "1.0.0",
+  "description": "* Curso de JavaScript (ES6+) na Origamid, com o professor André Rafael.  * Curso em progresso, confira [aqui](https://lucas-hmsc.github.io/javascript-es6/).",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas-HMSC/javascript-es6.git"
+  },
+  "author": "Lucas-HMSC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucas-HMSC/javascript-es6/issues"
+  },
+  "homepage": "https://github.com/Lucas-HMSC/javascript-es6#readme",
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-airbnb-base": "^14.2.1"
+  }
+}
