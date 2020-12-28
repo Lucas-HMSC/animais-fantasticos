@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limpar CPF</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    label {
+      display: block;
+      font-family: 'IBM Plex Mono';
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      border: 2px solid black;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+    input.erro {
+      border-color: red;
+    }
+    input.valido {
+      border-color: green;
+    }
+    input::placeholder {
+      color: rgba(0, 0, 0, .2);
+    }
+    .erro-text {
+      display: none;
+      font-family: 'IBM Plex Mono';
+      font-size: .875rem;
+      color: red;
+    }
+    .erro-text.ativar {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <label for="cpf">CPF</label>
+    <input type="text" name="cpf" id="cpf" placeholder="123.456.789-11">
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email"> 
+  </form>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
