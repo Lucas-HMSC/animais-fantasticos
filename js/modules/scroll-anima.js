@@ -24,7 +24,7 @@ export default class ScrollAnima {
     this.distance.forEach((item) => {
       if (window.pageYOffset > item.offset){
         item.element.classList.add('ativo');
-      } else if (section.classList.contains('ativo')){
+      } else if (item.element.classList.contains('ativo')){
         item.element.classList.remove('ativo');
       }
     });
