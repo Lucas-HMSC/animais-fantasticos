@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Lucas-HMSC/javascript-es6#readme",
   "devDependencies": {
     "eslint": "^7.16.0",
-    "eslint-config-airbnb-base": "^14.2.1"
+    "eslint-config-airbnb-base": "^14.2.1",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.0"
   }
 }
