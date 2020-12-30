@@ -18,11 +18,11 @@ export default class MenuMobile {
 
   openMenu(event) {
     event.preventDefault();
-    this.menuLista.classList.add(activeClass);
-    this.menuButton.classList.add(activeClass);
+    this.menuLista.classList.add(this.activeClass);
+    this.menuButton.classList.add(this.activeClass);
     outsideClick(this.menuLista, this.events, () => {
-      this.menuLista.classList.remove(activeClass);
-      this.menuButton.classList.remove(activeClass);
+      this.menuLista.classList.remove(this.activeClass);
+      this.menuButton.classList.remove(this.activeClass);
     });
   }
 
